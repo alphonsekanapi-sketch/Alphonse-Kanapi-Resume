@@ -4,6 +4,10 @@
    ============================================================ */
 
 const siteHeader = document.querySelector(".site-header");
+const documentRoot = document.documentElement;
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.getElementById("themeIcon");
+const themeColorMeta = document.getElementById("themeColorMeta");
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 const progressBar = document.getElementById("scrollProgress");
@@ -12,6 +16,39 @@ const navAnchors = document.querySelectorAll(".nav-links a");
 const pageSections = document.querySelectorAll("main section[id]");
 
 if (currentYear) currentYear.textContent = new Date().getFullYear();
+
+
+/* ============================================================
+   COLOR THEME
+   Persists the visitor's choice and falls back to OS preference.
+   ============================================================ */
+const storedTheme = localStorage.getItem("portfolio-theme");
+const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+function applyTheme(theme, persist = true) {
+  const safeTheme = theme === "light" ? "light" : "dark";
+  documentRoot.setAttribute("data-theme", safeTheme);
+
+  const switchingTo = safeTheme === "dark" ? "light" : "dark";
+  if (themeIcon) themeIcon.textContent = safeTheme === "dark" ? "☀" : "☾";
+  if (themeToggle) {
+    themeToggle.setAttribute("aria-label", `Switch to ${switchingTo} mode`);
+    themeToggle.setAttribute("title", `Switch to ${switchingTo} mode`);
+  }
+  if (themeColorMeta) themeColorMeta.setAttribute("content", safeTheme === "dark" ? "#100d14" : "#f7f3ed");
+  if (persist) localStorage.setItem("portfolio-theme", safeTheme);
+}
+
+applyTheme(storedTheme || (systemDark.matches ? "dark" : "light"), false);
+
+themeToggle?.addEventListener("click", () => {
+  applyTheme(documentRoot.getAttribute("data-theme") === "dark" ? "light" : "dark");
+});
+
+systemDark.addEventListener?.("change", (event) => {
+  if (!localStorage.getItem("portfolio-theme")) applyTheme(event.matches ? "dark" : "light", false);
+});
+
 
 function openMenu() {
   navLinks.classList.add("open");

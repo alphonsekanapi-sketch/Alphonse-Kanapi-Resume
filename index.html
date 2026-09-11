@@ -8,12 +8,19 @@
   <meta name="description" content="Portfolio and resume of Alphonse Kanapi, Learning Experience Lead working across learning strategy, HR technology, global people operations, and process improvement.">
   <meta name="keywords" content="Alphonse Kanapi, Learning Experience Lead, Learning and Development, HR Technology, LMS, LXP, HRIS, BambooHR, Payscale, Payfactors, Six Sigma, Learning Strategy">
   <meta name="author" content="Alphonse Kanapi">
-  <meta name="theme-color" content="#100d14">
+  <meta name="theme-color" id="themeColorMeta" content="#100d14">
 
   <meta property="og:title" content="Alphonse Kanapi | Learning Experience Lead">
   <meta property="og:description" content="Learning strategy, HR technology, global people operations, process improvement, and digital learning experiences.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/profile.jpg">
+  <meta property="og:image" content="assets/social-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Alphonse Kanapi personal brand logo">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alphonse Kanapi | Learning Experience Lead">
+  <meta name="twitter:description" content="Learning strategy, HR technology, global people operations, and digital learning experiences.">
+  <meta name="twitter:image" content="assets/social-preview.jpg">
 
   <link rel="icon" type="image/png" href="assets/alphonse-mark.png">
 
@@ -39,12 +46,6 @@
         <img src="assets/alphonse-logo.png" alt="Alphonse">
       </a>
 
-      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
       <div class="nav-links" id="navLinks">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
@@ -52,6 +53,18 @@
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-controls">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" title="Switch to light mode">
+          <span class="theme-toggle-icon" id="themeIcon" aria-hidden="true">☀</span>
+        </button>
+
+        <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </nav>
   </header>
@@ -196,9 +209,14 @@
           <div class="experience-side">
             <article class="career-card current-card reveal">
               <div class="career-card-head">
-                <div>
-                  <p class="company-label">LinkUp</p>
-                  <h3>Business Solution Architect</h3>
+                <div class="company-title-block">
+                  <div class="experience-logo-tile linkup-logo-tile" aria-hidden="true">
+                    <img src="assets/linkup-company.png" alt="">
+                  </div>
+                  <div>
+                    <p class="company-label">LinkUp</p>
+                    <h3>Business Solution Architect</h3>
+                  </div>
                 </div>
                 <div class="date-stack">
                   <span class="status-pill">Current</span>
@@ -219,9 +237,14 @@
 
             <article class="career-card early-card reveal">
               <div class="career-card-head">
-                <div>
-                  <p class="company-label">MerryMart</p>
-                  <h3>HR Associate</h3>
+                <div class="company-title-block">
+                  <div class="experience-logo-tile merrymart-logo-tile" aria-hidden="true">
+                    <img src="assets/merrymart-company.png" alt="">
+                  </div>
+                  <div>
+                    <p class="company-label">MerryMart</p>
+                    <h3>HR Associate</h3>
+                  </div>
                 </div>
                 <time>Feb 2020 to Aug 2020</time>
               </div>
@@ -235,9 +258,14 @@
 
           <article class="career-card boldr-career reveal">
             <div class="career-card-head boldr-head">
-              <div>
-                <p class="company-label">Boldr Impact</p>
-                <h3>Career Progression</h3>
+              <div class="company-title-block">
+                <div class="experience-logo-tile boldr-logo-tile" aria-hidden="true">
+                  <img src="assets/boldr-company.png" alt="">
+                </div>
+                <div>
+                  <p class="company-label">Boldr Impact</p>
+                  <h3>Career Progression</h3>
+                </div>
               </div>
               <time>2021 to Present</time>
             </div>
@@ -332,8 +360,8 @@
 
           <article class="credential-card reveal accent-orange">
             <div class="credential-topline">
-              <div class="brand-logo-tile">
-                <img src="https://img.logokit.com/payscale.com" alt="Payscale logo" loading="lazy" referrerpolicy="no-referrer">
+              <div class="brand-logo-tile payscale-logo-tile">
+                <img src="assets/payscale-logo.png" alt="Payscale logo" loading="lazy">
               </div>
               <span class="credential-category">Compensation technology</span>
             </div>
@@ -349,8 +377,8 @@
             <div class="credential-wide-head">
               <div>
                 <div class="credential-topline">
-                  <div class="brand-logo-tile wide-logo-tile">
-                    <img src="https://img.logokit.com/360learning.com" alt="360Learning logo" loading="lazy" referrerpolicy="no-referrer">
+                  <div class="brand-logo-tile learning360-logo-tile">
+                    <img src="assets/360learning-logo.png" alt="360Learning logo" loading="lazy">
                   </div>
                   <span class="credential-category">Learning and development</span>
                 </div>
@@ -373,8 +401,8 @@
 
           <article class="credential-card credential-wide strengths-card reveal accent-purple">
             <div class="credential-topline">
-              <div class="brand-logo-tile">
-                <img src="https://img.logokit.com/gallup.com" alt="Gallup logo" loading="lazy" referrerpolicy="no-referrer">
+              <div class="brand-logo-tile gallup-logo-tile">
+                <img src="assets/gallup-logo.png" alt="Gallup logo" loading="lazy">
               </div>
               <span class="credential-category">Strengths development</span>
             </div>
@@ -440,7 +468,7 @@
               </div>
               <div class="preview-stage">
                 <div class="preview-fallback">Leadership Simulation preview</div>
-                <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fpeopleteamlinkup-coder.github.io%2FLeadership-Training%2F?w=1200" alt="Preview of the LinkUp Leadership Simulation Training website" loading="lazy" data-project-preview>
+                <img src="assets/project-leadership.jpg" alt="Preview of the LinkUp Leadership Simulation Training website" loading="lazy" data-project-preview>
               </div>
             </div>
             <div class="project-content">
@@ -598,7 +626,7 @@
     <div class="container footer-content">
       <div class="footer-identity">
         <a href="#home" class="footer-brand" aria-label="Back to home">
-          <img src="assets/alphonse-logo.png" alt="Alphonse">
+          <img src="assets/alphonse-mark.png" alt="Alphonse icon">
         </a>
         <p>Learning experiences, people systems, and practical solutions.</p>
       </div>

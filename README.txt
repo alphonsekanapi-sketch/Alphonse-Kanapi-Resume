@@ -1,28 +1,33 @@
-ALPHONSE KANAPI PORTFOLIO V2
+ALPHONSE KANAPI PORTFOLIO — FINAL PACKAGE
 
-WHAT IS INCLUDED
-index.html
-style.css
-script.js
-assets/profile.jpg
-assets/alphonse-logo.png
-assets/alphonse-mark.png
-assets/ADD-RESUME-HERE.txt
+READY FOR GITHUB PAGES
+
+Upload the contents of this folder directly to the root of your GitHub repository.
+No build step, npm install, framework, or server is required.
+
+MAIN FILES
+- index.html
+- style.css
+- script.js
+- assets/
 
 RESUME
-Add your final PDF to assets/resume.pdf. The Download Resume button is already connected to that path.
+Add your final PDF as:
+assets/resume.pdf
 
-PROJECT PREVIEWS
-The project cards use lightweight website thumbnails from the WordPress mShots service so visitors can see current previews of the live projects. The live project buttons still link directly to your GitHub Pages sites. If a thumbnail service is temporarily unavailable, each card has a built in fallback.
+SOCIAL / LINK PREVIEW
+The site uses assets/social-preview.jpg so shared links show the Alphonse personal brand rather than the profile photo.
+For the most reliable LinkedIn and social previews, after you know your final GitHub Pages URL, you can replace the relative og:image URL in index.html with the full absolute URL to assets/social-preview.jpg.
 
-PLATFORM LOGOS
-Payscale, 360Learning, and Gallup brand icons are loaded through Logokit. No JavaScript library or framework is required.
+GITHUB REPOSITORY SOCIAL PREVIEW
+If you also want the GitHub repository link itself to show the same image, upload assets/social-preview.jpg in the repository's Settings > General > Social preview.
 
-GITHUB PAGES
-1. Upload the contents of this folder to a GitHub repository.
-2. Open Settings, then Pages.
+DEPLOYMENT
+1. Upload all files to the repository root.
+2. Go to Settings > Pages.
 3. Choose Deploy from a branch.
-4. Select the branch containing index.html and choose /root.
+4. Select your publishing branch and /root.
 5. Save.
 
-No npm install, build step, or framework is required.
+
+Final polish update: transparent PNG brand logos, improved logo sizing, and persistent light/dark mode toggle are included.
