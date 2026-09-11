@@ -30,4 +30,9 @@ DEPLOYMENT
 5. Save.
 
 
-Final polish update: transparent PNG brand logos, improved logo sizing, and persistent light/dark mode toggle are included.
+FINAL NOTES
+- The site now uses a single dark visual theme. The light/dark mode toggle and theme-switching JavaScript were removed.
+- Experience logos use a standardized visual footprint for LinkUp, Boldr, and MerryMart.
+- Payscale and 360Learning use icon-only transparent PNG assets.
+- Gallup uses a cleaned transparent PNG wordmark.
+- Add your resume as assets/resume.pdf.
