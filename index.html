@@ -241,71 +241,168 @@
           </div>
         </div>
 
-        <div class="experience-board">
-          <div class="experience-side">
-            <article class="career-card current-card side-career reveal" data-skill="hr-tech leadership process recruitment global-ops">
-              <div class="career-company-row">
-                <a class="company-link" href="https://linkupbpo.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkUp website">
-                  <span class="experience-logo-tile linkup-logo-tile" aria-hidden="true"><img src="assets/linkup-company.png" alt=""></span>
-                  <span class="company-label">LinkUp <span aria-hidden="true">↗</span></span>
-                </a>
-                <div class="date-stack"><span class="status-pill">Current</span><time>Dec 2025 to Present</time></div>
-              </div>
-              <h3 class="career-role-title">Business Solution Architect</h3>
-              <p class="role-summary">Building the people operations infrastructure, systems, and development programs needed to support LinkUp&apos;s growth.</p>
-              <ul class="compact-list">
-                <li>Built core HR operations covering contract administration, recruitment, employee records, ID creation, and payroll tracking.</li>
-                <li>Designed and launched three internal platforms and established a centralized HR database to support scalable operations.</li>
-                <li>Led the Aspiring Leaders development program, with all participants completing the two month learning journey.</li>
-              </ul>
-              <p class="scope-note"><strong>Additional scope:</strong> Contract review and operational support for business expansion.</p>
-            </article>
-
-            <article class="career-card early-card side-career reveal" data-skill="recruitment global-ops">
-              <div class="career-company-row">
-                <a class="company-link" href="https://merrymart.com.ph/" target="_blank" rel="noopener noreferrer" aria-label="Visit MerryMart website">
-                  <span class="experience-logo-tile merrymart-logo-tile" aria-hidden="true"><img src="assets/merrymart-company.png" alt=""></span>
-                  <span class="company-label">MerryMart <span aria-hidden="true">↗</span></span>
-                </a>
-                <time>Feb 2020 to Aug 2020</time>
-              </div>
-              <h3 class="career-role-title">Human Resources Assistant</h3>
-              <p class="role-summary">Supported end to end recruitment and employee lifecycle activities for Head Office, Distribution Center, and retail operations.</p>
-              <ul class="compact-list two-item-list">
-                <li>Managed recruitment from sourcing and interviewing through hiring and regularization.</li>
-                <li>Facilitated onsite recruitment activities across Visayas and Mindanao.</li>
-              </ul>
-            </article>
+        <div class="experience-toolbar reveal" aria-label="Filter experience by focus area">
+          <div class="experience-filter-group" role="group" aria-label="Experience focus filters">
+            <button class="experience-filter active" type="button" data-experience-filter="all" aria-pressed="true">All</button>
+            <button class="experience-filter" type="button" data-experience-filter="learning" aria-pressed="false">Learning</button>
+            <button class="experience-filter" type="button" data-experience-filter="hrtech" aria-pressed="false">HR Tech</button>
+            <button class="experience-filter" type="button" data-experience-filter="operations" aria-pressed="false">Operations</button>
           </div>
+          <p class="experience-filter-status" id="experienceFilterStatus" aria-live="polite">Showing all roles</p>
+        </div>
 
-          <article class="career-card boldr-career reveal" data-skill="hr-tech learning-design leadership global-ops process">
-            <div class="career-card-head boldr-head">
-              <a class="company-link boldr-company-link" href="https://boldrimpact.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Boldr Impact website">
+        <div class="experience-company-grid">
+          <article class="company-experience-card company-linkup reveal" data-company-card>
+            <header class="company-experience-head">
+              <a class="company-identity" href="https://linkupbpo.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkUp website">
+                <span class="experience-logo-tile linkup-logo-tile" aria-hidden="true"><img src="assets/linkup-company.png" alt=""></span>
+                <span class="company-label">LinkUp <span aria-hidden="true">↗</span></span>
+              </a>
+              <div class="company-date-block"><span class="status-pill">Current</span><time>Dec 2025 to Present</time></div>
+            </header>
+
+            <div class="role-accordion" data-focus="learning hrtech operations" data-role-item>
+              <button class="role-toggle" type="button" aria-expanded="false" aria-controls="role-linkup-details" data-role-toggle>
+                <span class="role-toggle-copy">
+                  <span class="role-title-line"><strong>Business Solution Architect</strong></span>
+                  <span class="role-one-line">Building the people operations infrastructure, systems, and development programs needed to support LinkUp&apos;s growth.</span>
+                </span>
+                <span class="role-toggle-icon" aria-hidden="true"><span></span><span></span></span>
+              </button>
+              <div class="role-details" id="role-linkup-details" data-role-details aria-hidden="true">
+                <div class="role-details-inner">
+                  <ul class="experience-detail-list">
+                    <li>Built core HR operations covering contract administration, recruitment, employee records, ID creation, and payroll tracking.</li>
+                    <li>Designed and launched three internal platforms and established a centralized HR database to support scalable operations.</li>
+                    <li>Led the Aspiring Leaders development program, with all participants completing the two month learning journey.</li>
+                  </ul>
+                  <p class="scope-note"><strong>Additional scope:</strong> Contract review and operational support for business expansion.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="company-experience-card company-merrymart reveal" data-company-card>
+            <header class="company-experience-head">
+              <a class="company-identity" href="https://merrymart.com.ph/" target="_blank" rel="noopener noreferrer" aria-label="Visit MerryMart website">
+                <span class="experience-logo-tile merrymart-logo-tile" aria-hidden="true"><img src="assets/merrymart-company.png" alt=""></span>
+                <span class="company-label">MerryMart <span aria-hidden="true">↗</span></span>
+              </a>
+              <div class="company-date-block"><time>Feb 2020 to Aug 2020</time></div>
+            </header>
+
+            <div class="role-accordion" data-focus="operations" data-role-item>
+              <button class="role-toggle" type="button" aria-expanded="false" aria-controls="role-merrymart-details" data-role-toggle>
+                <span class="role-toggle-copy">
+                  <span class="role-title-line"><strong>Human Resources Assistant</strong></span>
+                  <span class="role-one-line">Supported end to end recruitment and employee lifecycle activities for Head Office, Distribution Center, and retail operations.</span>
+                </span>
+                <span class="role-toggle-icon" aria-hidden="true"><span></span><span></span></span>
+              </button>
+              <div class="role-details" id="role-merrymart-details" data-role-details aria-hidden="true">
+                <div class="role-details-inner">
+                  <ul class="experience-detail-list">
+                    <li>Managed recruitment from sourcing and interviewing through hiring and regularization.</li>
+                    <li>Facilitated onsite recruitment activities across Visayas and Mindanao.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="company-experience-card company-boldr reveal" data-company-card>
+            <header class="company-experience-head">
+              <a class="company-identity" href="https://boldrimpact.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Boldr Impact website">
                 <span class="experience-logo-tile boldr-logo-tile" aria-hidden="true"><img src="assets/boldr-company.png" alt=""></span>
                 <span class="company-label">Boldr Impact <span aria-hidden="true">↗</span></span>
               </a>
-              <time>2021 to Present</time>
-            </div>
-            <h3 class="boldr-progression-title">Career Progression</h3>
+              <div class="company-date-block"><span class="status-pill">Current</span><time>Feb 2021 to Present</time></div>
+            </header>
 
-            <div class="featured-role-block">
-              <div class="featured-role-title">
-                <div><span class="status-pill">Current</span><h4>Learning Experience Lead</h4></div>
-                <time>Mar 2026 to Present</time>
+            <div class="boldr-timeline" aria-label="Boldr career progression">
+              <div class="timeline-role role-accordion" data-focus="learning hrtech" data-role-item>
+                <span class="timeline-node" aria-hidden="true"></span>
+                <button class="role-toggle timeline-toggle" type="button" aria-expanded="false" aria-controls="role-boldr-learning-details" data-role-toggle>
+                  <span class="role-toggle-copy">
+                    <span class="role-title-line"><strong>Learning Experience Lead</strong><span class="status-pill status-pill-mini">Current</span><time>Mar 2026 to Present</time></span>
+                    <span class="role-one-line">Leading learning technology, digital learning experiences, and capability initiatives across global teams.</span>
+                  </span>
+                  <span class="role-toggle-icon" aria-hidden="true"><span></span><span></span></span>
+                </button>
+                <div class="role-details" id="role-boldr-learning-details" data-role-details aria-hidden="true">
+                  <div class="role-details-inner">
+                    <ul class="experience-detail-list">
+                      <li>Manage learning platforms and vendor relationships across DataCamp, Juno Journey, Infosys Springboard, Articulate, and internal learning tools.</li>
+                      <li>Design and curate learning experiences based on business and team capability needs.</li>
+                      <li>Created a digital People Success service hub and support leadership connection experiences for new team members.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <p>Leading learning technology, digital learning experiences, and capability initiatives across global teams.</p>
-              <ul class="compact-list">
-                <li>Manage learning platforms and vendor relationships across DataCamp, Juno Journey, Infosys Springboard, Articulate, and internal learning tools.</li>
-                <li>Design and curate learning experiences based on business and team capability needs.</li>
-                <li>Created a digital People Success service hub and support leadership connection experiences for new team members.</li>
-              </ul>
-            </div>
 
-            <div class="career-progression" aria-label="Earlier Boldr roles">
-              <div class="progression-item"><div class="progression-year">2024</div><div><h4>Senior HRIS Specialist</h4><span class="progression-date">Mar 2024 to Mar 2026</span><p>Led compensation technology and HRIS initiatives across BambooHR, Payscale, Payfactors, internal systems, job standardization, and HR data architecture.</p></div></div>
-              <div class="progression-item"><div class="progression-year">2021</div><div><h4>Global Onboarding Success Specialist</h4><span class="progression-date">Oct 2021 to Apr 2024</span><p>Designed and maintained global onboarding and employee lifecycle processes while resolving operational and technical issues across multiple locations.</p></div></div>
-              <div class="progression-item"><div class="progression-year">2021</div><div><h4>Human Resource Onboarding Associate</h4><span class="progression-date">Feb 2021 to Oct 2021</span><p>Managed virtual onboarding, KPI documentation, employee evaluation workflows, and regularization processes.</p></div></div>
-              <div class="progression-item"><div class="progression-year">2021</div><div><h4>Human Resource Associate</h4><span class="progression-date">Feb 2021 to Apr 2021</span><p>Supported employee data management, new hire documentation, onboarding analytics, and cross functional HR reviews.</p></div></div>
+              <div class="timeline-role role-accordion" data-focus="hrtech operations" data-role-item>
+                <span class="timeline-node" aria-hidden="true"></span>
+                <button class="role-toggle timeline-toggle" type="button" aria-expanded="false" aria-controls="role-boldr-hris-details" data-role-toggle>
+                  <span class="role-toggle-copy">
+                    <span class="role-title-line"><strong>Senior HRIS Specialist</strong><time>Mar 2024 to Mar 2026</time></span>
+                    <span class="role-one-line">Led compensation technology and HRIS initiatives across BambooHR, Payscale, Payfactors, internal systems…</span>
+                  </span>
+                  <span class="role-toggle-icon" aria-hidden="true"><span></span><span></span></span>
+                </button>
+                <div class="role-details" id="role-boldr-hris-details" data-role-details aria-hidden="true">
+                  <div class="role-details-inner">
+                    <p class="role-detail-copy">Led compensation technology and HRIS initiatives across BambooHR, Payscale, Payfactors, internal systems, job standardization, and HR data architecture.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-role role-accordion" data-focus="hrtech operations" data-role-item>
+                <span class="timeline-node" aria-hidden="true"></span>
+                <button class="role-toggle timeline-toggle" type="button" aria-expanded="false" aria-controls="role-boldr-global-details" data-role-toggle>
+                  <span class="role-toggle-copy">
+                    <span class="role-title-line"><strong>Global Onboarding Success Specialist</strong><time>Oct 2021 to Apr 2024</time></span>
+                    <span class="role-one-line">Designed and maintained global onboarding and employee lifecycle processes across multiple locations…</span>
+                  </span>
+                  <span class="role-toggle-icon" aria-hidden="true"><span></span><span></span></span>
+                </button>
+                <div class="role-details" id="role-boldr-global-details" data-role-details aria-hidden="true">
+                  <div class="role-details-inner">
+                    <p class="role-detail-copy">Designed and maintained global onboarding and employee lifecycle processes while resolving operational and technical issues across multiple locations.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-role role-accordion" data-focus="operations" data-role-item>
+                <span class="timeline-node" aria-hidden="true"></span>
+                <button class="role-toggle timeline-toggle" type="button" aria-expanded="false" aria-controls="role-boldr-onboarding-details" data-role-toggle>
+                  <span class="role-toggle-copy">
+                    <span class="role-title-line"><strong>Human Resource Onboarding Associate</strong><time>Feb 2021 to Oct 2021</time></span>
+                    <span class="role-one-line">Managed virtual onboarding, KPI documentation, employee evaluation workflows, and regularization processes.</span>
+                  </span>
+                  <span class="role-toggle-icon" aria-hidden="true"><span></span><span></span></span>
+                </button>
+                <div class="role-details" id="role-boldr-onboarding-details" data-role-details aria-hidden="true">
+                  <div class="role-details-inner">
+                    <p class="role-detail-copy">Managed virtual onboarding, KPI documentation, employee evaluation workflows, and regularization processes.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-role role-accordion" data-focus="operations" data-role-item>
+                <span class="timeline-node" aria-hidden="true"></span>
+                <button class="role-toggle timeline-toggle" type="button" aria-expanded="false" aria-controls="role-boldr-associate-details" data-role-toggle>
+                  <span class="role-toggle-copy">
+                    <span class="role-title-line"><strong>Human Resource Associate</strong><time>Feb 2021 to Apr 2021</time></span>
+                    <span class="role-one-line">Supported employee data management, new hire documentation, onboarding analytics, and cross functional HR reviews.</span>
+                  </span>
+                  <span class="role-toggle-icon" aria-hidden="true"><span></span><span></span></span>
+                </button>
+                <div class="role-details" id="role-boldr-associate-details" data-role-details aria-hidden="true">
+                  <div class="role-details-inner">
+                    <p class="role-detail-copy">Supported employee data management, new hire documentation, onboarding analytics, and cross functional HR reviews.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </article>
         </div>

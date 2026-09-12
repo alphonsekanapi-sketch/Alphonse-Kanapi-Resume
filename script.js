@@ -134,3 +134,73 @@ skillFilterButtons.forEach((button) => {
     if (skillEvidence && skillEvidenceCopy[skill]) skillEvidence.innerHTML = skillEvidenceCopy[skill];
   });
 });
+
+/* ============================================================
+   EXPERIENCE ACCORDIONS + FOCUS FILTERS
+   ============================================================ */
+
+const experienceRoleItems = document.querySelectorAll("[data-role-item]");
+const experienceRoleToggles = document.querySelectorAll("[data-role-toggle]");
+const experienceFilterButtons = document.querySelectorAll("[data-experience-filter]");
+const experienceCompanyCards = document.querySelectorAll("[data-company-card]");
+const experienceFilterStatus = document.getElementById("experienceFilterStatus");
+
+function setRoleExpanded(toggle, expanded) {
+  const roleItem = toggle.closest("[data-role-item]");
+  const detailsId = toggle.getAttribute("aria-controls");
+  const details = detailsId ? document.getElementById(detailsId) : null;
+
+  toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+  roleItem?.classList.toggle("is-open", expanded);
+  details?.setAttribute("aria-hidden", expanded ? "false" : "true");
+}
+
+experienceRoleToggles.forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    setRoleExpanded(toggle, !expanded);
+  });
+});
+
+const experienceFilterLabels = {
+  all: "all roles",
+  learning: "learning focused roles",
+  hrtech: "HR technology focused roles",
+  operations: "operations focused roles"
+};
+
+function applyExperienceFilter(filter) {
+  experienceFilterButtons.forEach((button) => {
+    const active = button.dataset.experienceFilter === filter;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", active ? "true" : "false");
+  });
+
+  experienceRoleItems.forEach((roleItem) => {
+    const focusAreas = (roleItem.dataset.focus || "").split(/\s+/).filter(Boolean);
+    const visible = filter === "all" || focusAreas.includes(filter);
+    roleItem.classList.toggle("filter-hidden", !visible);
+
+    if (!visible) {
+      const toggle = roleItem.querySelector("[data-role-toggle]");
+      if (toggle) setRoleExpanded(toggle, false);
+    }
+  });
+
+  experienceCompanyCards.forEach((card) => {
+    const visibleRole = [...card.querySelectorAll("[data-role-item]")].some(
+      (role) => !role.classList.contains("filter-hidden")
+    );
+    card.classList.toggle("filter-hidden", !visibleRole);
+  });
+
+  if (experienceFilterStatus) {
+    experienceFilterStatus.textContent = `Showing ${experienceFilterLabels[filter] || "matching roles"}`;
+  }
+}
+
+experienceFilterButtons.forEach((button) => {
+  button.addEventListener("click", () => applyExperienceFilter(button.dataset.experienceFilter || "all"));
+});
+
+applyExperienceFilter("all");
