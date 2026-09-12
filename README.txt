@@ -22,3 +22,9 @@ The site uses Google Fonts, so an internet connection is needed for Manrope and 
 
 
 Final improvement session updates applied on 2026-09-12: real world map, refined About copy, corrected Boldr dates, updated Gallup section, merged capability tags, and refreshed tool directories.
+
+Resume asset updated: assets/resume.pdf (final ATS-friendly two-page resume)
+Editable resume included: assets/Alphonse-Kanapi-Resume.docx
+
+
+Final logo-only refresh: transparent Alphonse lockup in header/footer, AK icon favicon, and refreshed social share preview.
