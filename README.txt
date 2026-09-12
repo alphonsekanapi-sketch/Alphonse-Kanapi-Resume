@@ -1,38 +1,24 @@
-ALPHONSE KANAPI PORTFOLIO — FINAL PACKAGE
+ALPHONSE KANAPI PORTFOLIO — FINAL GITHUB PAGES BUILD
 
-READY FOR GITHUB PAGES
+Upload the contents of this folder directly to the root of your GitHub Pages repository.
 
-Upload the contents of this folder directly to the root of your GitHub repository.
-No build step, npm install, framework, or server is required.
-
-MAIN FILES
+Included:
 - index.html
 - style.css
 - script.js
-- assets/
+- assets/resume.pdf
+- assets/Alphonse-Kanapi-CliftonStrengths-34.pdf
+- local brand, company, credential, portrait, project and social-preview assets
 
-RESUME
-Add your final PDF as:
-assets/resume.pdf
+No npm, build step, framework or configuration is required.
 
-SOCIAL / LINK PREVIEW
-The site uses assets/social-preview.jpg so shared links show the Alphonse personal brand rather than the profile photo.
-For the most reliable LinkedIn and social previews, after you know your final GitHub Pages URL, you can replace the relative og:image URL in index.html with the full absolute URL to assets/social-preview.jpg.
-
-GITHUB REPOSITORY SOCIAL PREVIEW
-If you also want the GitHub repository link itself to show the same image, upload assets/social-preview.jpg in the repository's Settings > General > Social preview.
-
-DEPLOYMENT
-1. Upload all files to the repository root.
-2. Go to Settings > Pages.
+GitHub Pages:
+1. Push these files to your repository.
+2. Open Settings > Pages.
 3. Choose Deploy from a branch.
-4. Select your publishing branch and /root.
-5. Save.
+4. Select the branch and /root.
+
+The site uses Google Fonts, so an internet connection is needed for Manrope and Inter. The page falls back to system fonts if they are unavailable.
 
 
-FINAL NOTES
-- The site now uses a single dark visual theme. The light/dark mode toggle and theme-switching JavaScript were removed.
-- Experience logos use a standardized visual footprint for LinkUp, Boldr, and MerryMart.
-- Payscale and 360Learning use icon-only transparent PNG assets.
-- Gallup uses a cleaned transparent PNG wordmark.
-- Add your resume as assets/resume.pdf.
+Final improvement session updates applied on 2026-09-12: real world map, refined About copy, corrected Boldr dates, updated Gallup section, merged capability tags, and refreshed tool directories.
